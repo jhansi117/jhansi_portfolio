@@ -68,5 +68,19 @@ for (let i = 0, len = revealDelayElements.length; i < len; i++) {
   revealDelayElements[i].style.transitionDelay = revealDelayElements[i].dataset.revealDelay;
 }
 
+
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+
+function sendEmail() {
+  var name = encodeURIComponent(document.querySelector('input[name="name"]').value);
+  var email = encodeURIComponent(document.querySelector('input[name="email_address"]').value);
+  var message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
+
+  var yourEmail = 'jhansimathi@outlook.com';
+  var subject = 'New Message from your portfolio website';
+  var mailtoLink = 'mailto:' + yourEmail + '?subject=' + encodeURIComponent(subject) +
+                   '&body=Name: ' + name + '%0AEmail: ' + email + '%0AMessage: ' + message;
+
+  window.location.href = mailtoLink;
+}
