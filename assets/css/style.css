@@ -868,3 +868,11 @@ textarea.input-field {
   .about .grid-list { gap: 60px; }
 
 }
+
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
